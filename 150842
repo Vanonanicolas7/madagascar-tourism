@@ -1,0 +1,192 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  serverTimestamp
+} from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+
+
+// ===============================
+// FIREBASE CONFIG
+// ===============================
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCzjryit_T8PHpD9D7xdmxUheBU6gQ4n14",
+  authDomain: "madagascar-tourism.firebaseapp.com",
+  projectId: "madagascar-tourism",
+  storageBucket: "madagascar-tourism.firebasestorage.app",
+  messagingSenderId: "1098060851073",
+  appId: "1:1098060851073:web:ec08253935f77354beea80"
+};
+
+
+// ===============================
+// INITIALISATION
+// ===============================
+
+const app = initializeApp(firebaseConfig);
+
+const db = getFirestore(app);
+
+
+// ===============================
+// FORMULAIRE
+// ===============================
+
+const form =
+  document.getElementById("reservationForm");
+
+const successMessage =
+  document.getElementById("successMessage");
+
+const whatsappLink =
+  document.getElementById("whatsappLink");
+
+
+// ===============================
+// ENVOI
+// ===============================
+
+form.addEventListener("submit", async function(event) {
+
+  event.preventDefault();
+
+  const button =
+    form.querySelector('button[type="submit"]');
+
+  button.disabled = true;
+  button.textContent = "⏳ Enregistrement...";
+
+
+  const nom =
+    document.getElementById("name").value.trim();
+
+  const telephone =
+    document.getElementById("phone").value.trim();
+
+  const email =
+    document.getElementById("email").value.trim();
+
+  const destination =
+    document.getElementById("destination").value;
+
+  const date =
+    document.getElementById("date").value;
+
+  const personnes =
+    Number(document.getElementById("people").value);
+
+  const message =
+    document.getElementById("message").value.trim();
+
+
+  try {
+
+    // Enregistrer dans Firestore
+
+    await addDoc(
+      collection(db, "reservations"),
+      {
+        nom: nom,
+        telephone: telephone,
+        email: email,
+        destination: destination,
+        date: date,
+        personnes: personnes,
+        message: message,
+        statut: "nouvelle",
+        dateCreation: serverTimestamp()
+      }
+    );
+
+
+    // ==========================
+    // WHATSAPP
+    // ==========================
+
+    const whatsappNumber =
+      "261384147899";
+
+    let texte =
+      "Bonjour Madagascar Tourism !\n\n";
+
+    texte +=
+      "📅 DEMANDE DE RÉSERVATION\n\n";
+
+    texte +=
+      "👤 Nom : " + nom + "\n";
+
+    texte +=
+      "📱 Téléphone : " + telephone + "\n";
+
+    texte +=
+      "🌍 Destination : " + destination + "\n";
+
+    texte +=
+      "📅 Date : " + date + "\n";
+
+    texte +=
+      "👥 Personnes : " + personnes + "\n";
+
+    if (email) {
+
+      texte +=
+        "✉️ Email : " + email + "\n";
+
+    }
+
+    if (message) {
+
+      texte +=
+        "💬 Message : " + message + "\n";
+
+    }
+
+    texte +=
+      "\nMerci.";
+
+
+    whatsappLink.href =
+      "https://wa.me/" +
+      whatsappNumber +
+      "?text=" +
+      encodeURIComponent(texte);
+
+
+    // ==========================
+    // SUCCÈS
+    // ==========================
+
+    successMessage.style.display =
+      "block";
+
+    form.reset();
+
+    successMessage.scrollIntoView({
+      behavior: "smooth"
+    });
+
+
+  } catch (error) {
+
+    console.error(
+      "Firebase Error:",
+      error
+    );
+
+    alert(
+      "❌ Erreur Firebase : " +
+      error.message
+    );
+
+  }
+
+
+  button.disabled = false;
+
+  button.textContent =
+    "💾 Enregistrer la réservation";
+
+});
