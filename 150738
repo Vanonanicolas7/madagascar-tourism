@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Tableau de bord des réservations - Madagascar Tourism"
+  >
+
+  <title>
+    Admin | Madagascar Tourism
+  </title>
+
+  <link
+    rel="icon"
+    href="favicon.svg"
+    type="image/svg+xml"
+  >
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+</head>
+
+
+<body>
+
+
+<header>
+
+  <div class="logo">
+    🇲🇬 Madagascar Tourism
+  </div>
+
+  <button
+    class="menu-btn"
+    aria-label="Ouvrir le menu"
+  >
+    ☰
+  </button>
+
+  <nav>
+
+    <a href="index.html">
+      Accueil
+    </a>
+
+    <a href="reservation.html">
+      Réservation
+    </a>
+
+  </nav>
+
+</header>
+
+
+
+<main class="reservation-page">
+
+
+<section class="reservation-container">
+
+
+  <div class="section-title">
+
+    <h1>
+      📊 Tableau de bord
+    </h1>
+
+    <p>
+      Gestion des réservations
+    </p>
+
+  </div>
+
+
+
+  <!-- STATISTIQUES -->
+
+  <div
+    class="destination-grid"
+    id="stats"
+  >
+  </div>
+
+
+
+  <!-- RECHERCHE -->
+
+  <div class="form-group">
+
+    <label for="search">
+      🔎 Rechercher
+    </label>
+
+    <input
+      type="search"
+      id="search"
+      placeholder="Nom, téléphone ou destination..."
+    >
+
+  </div>
+
+
+
+  <!-- FILTRE DESTINATION -->
+
+  <div class="form-group">
+
+    <label for="filterDestination">
+      🌍 Destination
+    </label>
+
+    <select id="filterDestination">
+
+      <option value="">
+        Toutes les destinations
+      </option>
+
+      <option value="Nosy Be">
+        Nosy Be
+      </option>
+
+      <option value="Nosy Tanikely">
+        Nosy Tanikely
+      </option>
+
+      <option value="Isalo">
+        Isalo
+      </option>
+
+      <option value="Andringitra">
+        Andringitra
+      </option>
+
+      <option value="Ranomafana">
+        Ranomafana
+      </option>
+
+      <option value="Andasibe">
+        Andasibe
+      </option>
+
+      <option value="Avenue des Baobabs">
+        Avenue des Baobabs
+      </option>
+
+      <option value="Tsingy">
+        Tsingy
+      </option>
+
+    </select>
+
+  </div>
+
+
+
+  <!-- BOUTONS -->
+
+  <button
+    id="exportBtn"
+    class="destination-reserve"
+  >
+    📥 Exporter CSV
+  </button>
+
+
+  <button
+    id="clearBtn"
+    class="destination-reserve"
+  >
+    🗑️ Tout supprimer
+  </button>
+
+
+
+</section>
+
+
+
+<!-- LISTE -->
+
+<section class="reservation-container">
+
+  <div class="section-title">
+
+    <h2>
+      📋 Liste des réservations
+    </h2>
+
+  </div>
+
+
+  <div id="reservationList">
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<footer>
+
+  <div class="footer-content">
+
+    <h3>
+      🇲🇬 Madagascar Tourism
+    </h3>
+
+    <p>
+      Découvrez la beauté de Madagascar.
+    </p>
+
+  </div>
+
+  <div class="footer-bottom">
+
+    <p>
+      © 2026 Madagascar Tourism.
+      Tous droits réservés.
+    </p>
+
+  </div>
+
+</footer>
+
+
+
+<script>
+
+document.addEventListener(
+  "DOMContentLoaded",
+  function () {
+
+
+    const list =
+      document.getElementById(
+        "reservationList"
+      );
+
+
+    const search =
+      document.getElementById(
+        "search"
+      );
+
+
+    const filter =
+      document.getElementById(
+        "filterDestination"
+      );
+
+
+    const stats =
+      document.getElementById(
+        "stats"
+      );
+
+
+    function getReservations() {
+
+      return JSON.parse(
+        localStorage.getItem(
+          "reservations"
+        ) || "[]"
+      );
+
+    }
+
+
+
+    function afficher() {
+
+      const reservations =
+        getReservations();
+
+
+      const recherche =
+        search.value
+          .toLowerCase()
+          .trim();
+
+
+      const destination =
+        filter.value;
+
+
+      const resultats =
+        reservations.filter(
+          function (r) {
+
+            const texte =
+              (
+                r.nom +
+                " " +
+                r.telephone +
+                " " +
+                r.destination
+              ).toLowerCase();
+
+
+            const matchSearch =
+              texte.includes(
+                recherche
+              );
+
+
+            const matchDestination =
+              destination === "" ||
+              r.destination ===
+              destination;
+
+
+            return (
+              matchSearch &&
+              matchDestination
+            );
+
+          }
+        );
+
+
+      afficherStats(
+        reservations
+      );
+
+
+      list.innerHTML = "";
+
+
+      if (
+        resultats.length === 0
+      ) {
+
+        list.innerHTML =
+          "<p>Aucune réservation trouvée.</p>";
+
+        return;
+
+      }
+
+
+      resultats.forEach(
+        function (r, index) {
+
+
+          const card =
+            document.createElement(
+              "div"
+            );
+
+
+          card.className =
+            "destination-card";
+
+
+          card.style.padding =
+            "20px";
+
+
+          card.style.marginBottom =
+            "15px";
+
+
+          card.innerHTML = `
+
+            <h3>
+              🌍 ${escapeHTML(
+                r.destination
+              )}
+            </h3>
+
+            <p>
+              👤 <strong>Nom :</strong>
+              ${escapeHTML(r.nom)}
+            </p>
+
+            <p>
+              📱 <strong>Téléphone :</strong>
+              ${escapeHTML(r.telephone)}
+            </p>
+
+            <p>
+              📅 <strong>Date :</strong>
+              ${escapeHTML(r.date)}
+            </p>
+
+            <p>
+              👥 <strong>Personnes :</strong>
+              ${escapeHTML(r.personnes)}
+            </p>
+
+            ${
+              r.email
+              ? `
+                <p>
+                  ✉️ <strong>Email :</strong>
+                  ${escapeHTML(r.email)}
+                </p>
+              `
+              : ""
+            }
+
+            ${
+              r.message
+              ? `
+                <p>
+                  💬 <strong>Message :</strong>
+                  ${escapeHTML(r.message)}
+                </p>
+              `
+              : ""
+            }
+
+            <button
+              onclick="supprimer(${index})"
+              style="
+                margin-top:10px;
+                padding:10px;
+                border:0;
+                border-radius:8px;
+                cursor:pointer;
+              "
+            >
+              🗑️ Supprimer
+            </button>
+
+          `;
+
+
+          list.appendChild(
+            card
+          );
+
+        }
+      );
+
+    }
+
+
+
+    function afficherStats(
+      reservations
+    ) {
+
+      const total =
+        reservations.length;
+
+
+      const personnes =
+        reservations.reduce(
+          function (total, r) {
+
+            return (
+              total +
+              Number(
+                r.personnes || 0
+              )
+            );
+
+          },
+          0
+        );
+
+
+      const destinations =
+        new Set(
+          reservations.map(
+            function (r) {
+              return r.destination;
+            }
+          )
+        ).size;
+
+
+      stats.innerHTML = `
+
+        <div class="destination-card"
+             style="padding:20px">
+
+          <h3>📋</h3>
+
+          <strong>
+            ${total}
+          </strong>
+
+          <p>
+            Réservations
+          </p>
+
+        </div>
+
+
+        <div class="destination-card"
+             style="padding:20px">
+
+          <h3>👥</h3>
+
+          <strong>
+            ${personnes}
+          </strong>
+
+          <p>
+            Personnes
+          </p>
+
+        </div>
+
+
+        <div class="destination-card"
+             style="padding:20px">
+
+          <h3>🌍</h3>
+
+          <strong>
+            ${destinations}
+          </strong>
+
+          <p>
+            Destinations
+          </p>
+
+        </div>
+
+      `;
+
+    }
+
+
+
+    search.addEventListener(
+      "input",
+      afficher
+    );
+
+
+    filter.addEventListener(
+      "change",
+      afficher
+    );
+
+
+
+    /* =========================
+       EXPORT CSV
+    ========================= */
+
+    document
+      .getElementById("exportBtn")
+      .addEventListener(
+        "click",
+        function () {
+
+
+          const reservations =
+            getReservations();
+
+
+          if (
+            reservations.length === 0
+          ) {
+
+            alert(
+              "Aucune réservation à exporter."
+            );
+
+            return;
+
+          }
+
+
+          let csv =
+            "Nom;Téléphone;Email;Destination;Date;Personnes;Message\n";
+
+
+          reservations.forEach(
+            function (r) {
+
+              csv +=
+                `"${cleanCSV(r.nom)}";` +
+                `"${cleanCSV(r.telephone)}";` +
+                `"${cleanCSV(r.email)}";` +
+                `"${cleanCSV(r.destination)}";` +
+                `"${cleanCSV(r.date)}";` +
+                `"${cleanCSV(r.personnes)}";` +
+                `"${cleanCSV(r.message)}"\n`;
+
+            }
+          );
+
+
+          const blob =
+            new Blob(
+              [csv],
+              {
+                type:
+                  "text/csv;charset=utf-8;"
+              }
+            );
+
+
+          const url =
+            URL.createObjectURL(
+              blob
+            );
+
+
+          const a =
+            document.createElement(
+              "a"
+            );
+
+
+          a.href = url;
+
+          a.download =
+            "reservations.csv";
+
+          a.click();
+
+
+          URL.revokeObjectURL(
+            url
+          );
+
+        }
+      );
+
+
+
+    /* =========================
+       TOUT SUPPRIMER
+    ========================= */
+
+    document
+      .getElementById("clearBtn")
+      .addEventListener(
+        "click",
+        function () {
+
+
+          const ok =
+            confirm(
+              "Supprimer toutes les réservations ?"
+            );
+
+
+          if (!ok) {
+            return;
+          }
+
+
+          localStorage.removeItem(
+            "reservations"
+          );
+
+
+          afficher();
+
+        }
+      );
+
+
+
+    afficher();
+
+  }
+);
+
+
+
+function supprimer(index) {
+
+  const reservations =
+    JSON.parse(
+      localStorage.getItem(
+        "reservations"
+      ) || "[]"
+    );
+
+
+  reservations.splice(
+    index,
+    1
+  );
+
+
+  localStorage.setItem(
+    "reservations",
+    JSON.stringify(
+      reservations
+    )
+  );
+
+
+  location.reload();
+
+}
+
+
+
+function escapeHTML(value) {
+
+  return String(
+    value ?? ""
+  )
+    .replace(
+      /&/g,
+      "&amp;"
+    )
+    .replace(
+      /</g,
+      "&lt;"
+    )
+    .replace(
+      />/g,
+      "&gt;"
+    )
+    .replace(
+      /"/g,
+      "&quot;"
+    )
+    .replace(
+      /'/g,
+      "&#039;"
+    );
+
+}
+
+
+
+function cleanCSV(value) {
+
+  return String(
+    value ?? ""
+  )
+    .replace(
+      /"/g,
+      '""'
+    )
+    .replace(
+      /\r?\n/g,
+      " "
+    );
+
+}
+
+</script>
+
+
+<script src="script.js"></script>
+<script type="module" src="admin.js"></script>
+
+</body>
+
+</html>
