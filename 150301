@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Découvrez Nosy Be, destination touristique exceptionnelle de Madagascar.">
+<meta name="keywords" content="Nosy Be, Madagascar, tourisme, plage, voyage">
+<meta name="author" content="Madagascar Tourism">
+<meta name="theme-color" content="#176b2c">
+
+<title>Nosy Be | Madagascar Tourism</title>
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="logo">🇲🇬 Madagascar Tourism</div>
+
+  <button class="menu-btn" aria-label="Ouvrir le menu">☰</button>
+
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="index.html#destinations">Destinations</a>
+    <a href="index.html#about">À propos</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="reservation.html">Réservation</a>
+  </nav>
+</header>
+
+<main class="destination-page">
+
+<section class="destination-hero">
+
+<img src="images/Nosy_Be.jpg" alt="Nosy Be Madagascar">
+
+<div class="destination-hero-text">
+<h1>🏝️ Nosy Be</h1>
+
+<p>
+Découvrez les plages, les eaux turquoise
+et les magnifiques paysages de Nosy Be.
+</p>
+</div>
+
+</section>
+
+<section class="destination-info">
+
+<h2>🏝️ À propos de Nosy Be</h2>
+
+<p>
+Nosy Be est une destination touristique
+connue pour ses plages, ses paysages
+et son environnement marin.
+</p>
+
+<p>
+C'est une destination idéale pour découvrir
+la nature et profiter des paysages de Madagascar.
+</p>
+
+</section>
+
+<section class="activities">
+
+<h2>🌴 Activités</h2>
+
+<div class="activity-grid">
+
+<div class="activity-card">
+<h3>🏖️ Plage</h3>
+<p>Profitez des magnifiques plages et des paysages côtiers.</p>
+</div>
+
+<div class="activity-card">
+<h3>🤿 Mer</h3>
+<p>Découvrez les richesses du milieu marin.</p>
+</div>
+
+<div class="activity-card">
+<h3>🌿 Nature</h3>
+<p>Explorez les paysages naturels de l'île.</p>
+</div>
+
+<div class="activity-card">
+<h3>📸 Photographie</h3>
+<p>Capturez les magnifiques paysages de Nosy Be.</p>
+</div>
+
+</div>
+</section>
+
+<section class="gallery">
+
+<h2>📸 Galerie Nosy Be</h2>
+
+<div class="gallery-grid">
+
+<img src="images/Nosy_Be.jpg" alt="Paysage de Nosy Be">
+
+<img src="images/Nosy_Be.jpg" alt="Plage de Nosy Be">
+
+</div>
+
+</section>
+
+<section class="location">
+
+<h2>📍 Localisation</h2>
+
+<p>
+Nosy Be se trouve au nord-ouest de Madagascar.
+</p>
+
+</section>
+
+<section class="destination-contact">
+
+<h2>📅 Visiter Nosy Be</h2>
+
+<p>Vous souhaitez organiser votre visite ?</p>
+
+<a
+href="reservation.html?destination=Nosy%20Be"
+class="destination-reserve">
+📅 Réserver
+</a>
+
+<a
+href="https://wa.me/261384147899?text=Bonjour%20Madagascar%20Tourism%2C%20je%20souhaite%20avoir%20des%20informations%20sur%20Nosy%20Be."
+class="whatsapp-btn"
+target="_blank">
+💬  WhatsApp
+</a>
+
+</section>
+
+<div class="back-button">
+<a href="index.html#destinations">
+← Retour aux destinations
+</a>
+</div>
+
+</main>
+
+<footer>
+
+<div class="footer-content">
+<h3>🇲🇬 Madagascar Tourism</h3>
+<p>Découvrez la beauté de Madagascar.</p>
+</div>
+
+<div class="footer-bottom">
+<p>© 2026 Madagascar Tourism. Tous droits réservés.</p>
+</div>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

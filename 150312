@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Découvrez l'Avenue des Baobabs à Madagascar.">
+<meta name="keywords" content="Baobabs, Madagascar, Avenue des Baobabs, tourisme">
+
+<title>Avenue des Baobabs | Madagascar Tourism</title>
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">🇲🇬 Madagascar Tourism</div>
+
+<button class="menu-btn" aria-label="Ouvrir le menu">☰</button>
+
+<nav>
+<a href="index.html">Accueil</a>
+<a href="index.html#destinations">Destinations</a>
+<a href="index.html#about">À propos</a>
+<a href="index.html#contact">Contact</a>
+<a href="reservation.html">Réservation</a>
+</nav>
+
+</header>
+
+<main class="destination-page">
+
+<section class="destination-hero">
+
+<img src="images/baobabss.jpg" alt="Avenue des Baobabs Madagascar">
+
+<div class="destination-hero-text">
+
+<h1>🌴 Avenue des Baobabs</h1>
+
+<p>
+Admirez les célèbres baobabs et les
+paysages spectaculaires de Madagascar.
+</p>
+
+</div>
+
+</section>
+
+<section class="destination-info">
+
+<h2>🌴 À propos des Baobabs</h2>
+
+<p>
+L'Avenue des Baobabs est l'un des paysages
+les plus célèbres de Madagascar.
+</p>
+
+<p>
+Les grands baobabs offrent un paysage
+exceptionnel particulièrement apprécié
+des visiteurs.
+</p>
+
+</section>
+
+<section class="activities">
+
+<h2>🌴 Activités</h2>
+
+<div class="activity-grid">
+
+<div class="activity-card">
+<h3>🚶 Promenade</h3>
+<p>Découvrez l'avenue et ses paysages.</p>
+</div>
+
+<div class="activity-card">
+<h3>🌳 Baobabs</h3>
+<p>Admirez les célèbres arbres de Madagascar.</p>
+</div>
+
+<div class="activity-card">
+<h3>🌅 Paysage</h3>
+<p>Profitez des magnifiques paysages naturels.</p>
+</div>
+
+<div class="activity-card">
+<h3>📸 Photographie</h3>
+<p>Capturez des souvenirs exceptionnels.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="gallery">
+
+<h2>📸 Galerie</h2>
+
+<div class="gallery-grid">
+
+<img src="images/baobabss.jpg" alt="Avenue des Baobabs">
+
+<img src="images/baobabss.jpg" alt="Baobabs Madagascar">
+
+</div>
+
+</section>
+
+<section class="location">
+
+<h2>📍 Localisation</h2>
+
+<p>
+L'Avenue des Baobabs se trouve dans
+l'ouest de Madagascar.
+</p>
+
+</section>
+
+<section class="destination-contact">
+
+<h2>📅 Visiter les Baobabs</h2>
+
+<p>Préparez votre visite de l'Avenue des Baobabs.</p>
+
+<a
+href="reservation.html?destination=Avenue%20des%20Baobabs"
+class="destination-reserve">
+📅 Réserver
+</a>
+
+<a
+href="https://wa.me/261384147899?text=Bonjour%20Madagascar%20Tourism%2C%20je%20souhaite%20avoir%20des%20informations%20sur%20l%27Avenue%20des%20Baobabs."
+class="whatsapp-btn"
+target="_blank">
+💬 WhatsApp
+</a>
+
+</section>
+
+<div class="back-button">
+<a href="index.html#destinations">← Retour aux destinations</a>
+</div>
+
+</main>
+
+<footer>
+
+<div class="footer-content">
+<h3>🇲🇬 Madagascar Tourism</h3>
+<p>Découvrez la beauté de Madagascar.</p>
+</div>
+
+<div class="footer-bottom">
+<p>© 2026 Madagascar Tourism. Tous droits réservés.</p>
+</div>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Découvrez Nosy Tanikely à Madagascar.">
+<meta name="keywords" content="Nosy Tanikely, Madagascar, tourisme, plage, nature">
+<meta name="author" content="Madagascar Tourism">
+
+<title>Nosy Tanikely | Madagascar Tourism</title>
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">🇲🇬 Madagascar Tourism</div>
+
+<button class="menu-btn" aria-label="Ouvrir le menu">☰</button>
+
+<nav>
+<a href="index.html">Accueil</a>
+<a href="index.html#destinations">Destinations</a>
+<a href="index.html#about">À propos</a>
+<a href="index.html#contact">Contact</a>
+<a href="reservation.html">Réservation</a>
+</nav>
+
+</header>
+
+<main class="destination-page">
+
+<section class="destination-hero">
+
+<img src="images/tanikely.jpg" alt="Nosy Tanikely Madagascar">
+
+<div class="destination-hero-text">
+<h1>🌊 Nosy Tanikely</h1>
+
+<p>
+Découvrez une magnifique île aux eaux
+claires et aux paysages exceptionnels.
+</p>
+</div>
+
+</section>
+
+<section class="destination-info">
+
+<h2>🌊 À propos de Nosy Tanikely</h2>
+
+<p>
+Nosy Tanikely est une destination naturelle
+appréciée pour ses paysages et son environnement marin.
+</p>
+
+<p>
+Elle offre une expérience idéale pour découvrir
+la beauté naturelle de Madagascar.
+</p>
+
+</section>
+
+<section class="activities">
+
+<h2>🌊 Activités</h2>
+
+<div class="activity-grid">
+
+<div class="activity-card">
+<h3>🏖️ Plage</h3>
+<p>Profitez des paysages côtiers.</p>
+</div>
+
+<div class="activity-card">
+<h3>🤿 Exploration marine</h3>
+<p>Découvrez la richesse du milieu marin.</p>
+</div>
+
+<div class="activity-card">
+<h3>🌿 Nature</h3>
+<p>Explorez l'environnement naturel.</p>
+</div>
+
+<div class="activity-card">
+<h3>📸 Photographie</h3>
+<p>Immortalisez les paysages de l'île.</p>
+</div>
+
+</div>
+</section>
+
+<section class="gallery">
+
+<h2>📸 Galerie</h2>
+
+<div class="gallery-grid">
+
+<img src="images/tanikely.jpg" alt="Nosy Tanikely">
+
+<img src="images/tanikely.jpg" alt="Paysage de Nosy Tanikely">
+
+</div>
+
+</section>
+
+<section class="location">
+
+<h2>📍 Localisation</h2>
+
+<p>
+Nosy Tanikely se situe dans le nord-ouest
+de Madagascar, près de Nosy Be.
+</p>
+
+</section>
+
+<section class="destination-contact">
+
+<h2>📅 Visiter Nosy Tanikely</h2>
+
+<p>Préparez votre visite à Nosy Tanikely.</p>
+
+<a
+href="reservation.html?destination=Nosy%20Tanikely"
+class="destination-reserve">
+📅 Réserver
+</a>
+
+<a
+href="https://wa.me/261XXXXXXXXX?text=Bonjour%20Madagascar%20Tourism%2C%20je%20souhaite%20avoir%20des%20informations%20sur%20Nosy%20Tanikely."
+class="whatsapp-btn"
+target="_blank">
+💬 WhatsApp
+</a>
+
+</section>
+
+<div class="back-button">
+<a href="index.html#destinations">← Retour aux destinations</a>
+</div>
+
+</main>
+
+<footer>
+
+<div class="footer-content">
+<h3>🇲🇬 Madagascar Tourism</h3>
+<p>Découvrez la beauté de Madagascar.</p>
+</div>
+
+<div class="footer-bottom">
+<p>© 2026 Madagascar Tourism. Tous droits réservés.</p>
+</div>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

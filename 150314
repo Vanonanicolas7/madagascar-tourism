@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Découvrez les Tsingy de Madagascar."
+  >
+
+  <title>Tsingy - Madagascar Tourism</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+  <div class="logo">
+    🇲🇬 Madagascar Tourism
+  </div>
+
+
+  <button
+    class="menu-btn"
+    aria-label="Ouvrir le menu"
+  >
+    ☰
+  </button>
+
+
+  <nav>
+
+    <a href="index.html">
+      Accueil
+    </a>
+
+    <a href="index.html#destinations">
+      Destinations
+    </a>
+
+    <a href="index.html#about">
+      À propos
+    </a>
+
+    <a href="index.html#contact">
+      Contact
+    </a>
+
+    <a href="reservation.html">
+      Réservation
+    </a>
+
+  </nav>
+
+</header>
+
+
+
+<main class="destination-page">
+
+
+  <!-- HERO -->
+
+  <section class="destination-hero">
+
+    <img
+      src="images/tsingyy.jpg"
+      alt="Tsingy Madagascar"
+    >
+
+
+    <div class="destination-hero-text">
+
+      <h1>
+        🪨 Les Tsingy
+      </h1>
+
+
+      <p>
+        Découvrez les impressionnantes
+        formations rocheuses des Tsingy
+        de Madagascar.
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- DESCRIPTION -->
+
+  <section class="destination-info">
+
+    <h2>
+      À propos des Tsingy
+    </h2>
+
+
+    <p>
+      Les Tsingy sont des formations
+      calcaires spectaculaires qui offrent
+      un paysage naturel unique à Madagascar.
+    </p>
+
+
+    <p>
+      Le site est particulièrement apprécié
+      pour ses paysages impressionnants,
+      ses sentiers et sa biodiversité.
+    </p>
+
+  </section>
+
+
+
+  <!-- ACTIVITÉS -->
+
+  <section class="activities">
+
+    <h2>
+      🪨 Activités aux Tsingy
+    </h2>
+
+
+    <div class="activity-grid">
+
+
+      <div class="activity-card">
+
+        <h3>
+          🥾 Randonnée
+        </h3>
+
+        <p>
+          Explorez les chemins et découvrez
+          les formations rocheuses.
+        </p>
+
+      </div>
+
+
+
+      <div class="activity-card">
+
+        <h3>
+          🌿 Nature
+        </h3>
+
+        <p>
+          Découvrez la biodiversité et
+          les paysages naturels.
+        </p>
+
+      </div>
+
+
+
+      <div class="activity-card">
+
+        <h3>
+          🌉 Exploration
+        </h3>
+
+        <p>
+          Découvrez les passerelles et
+          les paysages spectaculaires.
+        </p>
+
+      </div>
+
+
+
+      <div class="activity-card">
+
+        <h3>
+          📸 Photographie
+        </h3>
+
+        <p>
+          Capturez les magnifiques
+          paysages des Tsingy.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- GALERIE -->
+
+  <section class="gallery">
+
+    <h2>
+      📸 Galerie
+    </h2>
+
+
+    <div class="gallery-grid">
+
+
+      <img
+        src="images/tsingyy.jpg"
+        alt="Tsingy de Madagascar"
+      >
+
+
+      <img
+        src="images/tsingyy.jpg"
+        alt="Paysage des Tsingy"
+      >
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- LOCALISATION -->
+
+  <section class="location">
+
+    <h2>
+      📍 Localisation
+    </h2>
+
+
+    <p>
+      Les Tsingy de Bemaraha se trouvent
+      dans l'ouest de Madagascar.
+    </p>
+
+  </section>
+
+
+
+  <!-- CONTACT / RÉSERVATION -->
+
+  <section class="destination-contact">
+
+
+    <h2>
+      💬 Vous souhaitez visiter les Tsingy ?
+    </h2>
+
+
+    <p>
+      Contactez-nous ou faites directement
+      une demande de réservation.
+    </p>
+
+
+
+
+
+    <a
+      href="reservation.html"
+      class="destination-reserve"
+      data-destination="Tsingy"
+    >
+      📅 Réserver
+    </a>
+        <a
+      href="#"
+      class="whatsapp-btn destination-whatsapp"
+      data-destination="Tsingy"
+    >
+      💬 whatsapp
+    </a>
+
+
+  </section>
+
+
+
+  <!-- RETOUR -->
+
+  <div class="back-button">
+
+    <a href="index.html#destinations">
+      ← Retour aux destinations
+    </a>
+
+  </div>
+
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+
+  <div class="footer-content">
+
+    <h3>
+      🇲🇬 Madagascar Tourism
+    </h3>
+
+
+    <p>
+      Découvrez la beauté de Madagascar.
+    </p>
+
+  </div>
+
+
+  <div class="footer-bottom">
+
+    <p>
+      © 2026 Madagascar Tourism.
+      Tous droits réservés.
+    </p>
+
+  </div>
+
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

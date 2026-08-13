@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Découvrez Andasibe et sa forêt tropicale à Madagascar.">
+<meta name="keywords" content="Andasibe, Madagascar, forêt, nature, tourisme">
+
+<title>Andasibe | Madagascar Tourism</title>
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">🇲🇬 Madagascar Tourism</div>
+
+<button class="menu-btn" aria-label="Ouvrir le menu">☰</button>
+
+<nav>
+<a href="index.html">Accueil</a>
+<a href="index.html#destinations">Destinations</a>
+<a href="index.html#about">À propos</a>
+<a href="index.html#contact">Contact</a>
+<a href="reservation.html">Réservation</a>
+</nav>
+
+</header>
+
+<main class="destination-page">
+
+<section class="destination-hero">
+
+<img src="images/andasibee.jpg" alt="Andasibe Madagascar">
+
+<div class="destination-hero-text">
+
+<h1>🌳 Andasibe</h1>
+
+<p>
+Découvrez la forêt tropicale et la richesse
+de la biodiversité d'Andasibe.
+</p>
+
+</div>
+
+</section>
+
+<section class="destination-info">
+
+<h2>🌳 À propos d'Andasibe</h2>
+
+<p>
+Andasibe est une destination naturelle
+connue pour ses forêts et sa biodiversité.
+</p>
+
+<p>
+La région permet de découvrir la nature
+et les paysages exceptionnels de Madagascar.
+</p>
+
+</section>
+
+<section class="activities">
+
+<h2>🌿 Activités</h2>
+
+<div class="activity-grid">
+
+<div class="activity-card">
+<h3>🥾 Randonnée</h3>
+<p>Parcourez les sentiers naturels.</p>
+</div>
+
+<div class="activity-card">
+<h3>🌳 Forêt</h3>
+<p>Découvrez la forêt tropicale.</p>
+</div>
+
+<div class="activity-card">
+<h3>🐒 Biodiversité</h3>
+<p>Observez la richesse naturelle de la région.</p>
+</div>
+
+<div class="activity-card">
+<h3>📸 Photographie</h3>
+<p>Profitez des paysages pour vos photos.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="gallery">
+
+<h2>📸 Galerie</h2>
+
+<div class="gallery-grid">
+
+<img src="images/andasibee.jpg" alt="Andasibe">
+
+<img src="images/andasibee.jpg" alt="Forêt d'Andasibe">
+
+</div>
+
+</section>
+
+<section class="location">
+
+<h2>📍 Localisation</h2>
+
+<p>
+Andasibe se trouve dans l'est de Madagascar.
+</p>
+
+</section>
+
+<section class="destination-contact">
+
+<h2>📅 Visiter Andasibe</h2>
+
+<p>Préparez votre visite à Andasibe.</p>
+
+<a
+href="reservation.html?destination=Andasibe"
+class="destination-reserve">
+📅 Réserver
+</a>
+
+<a
+href="https://wa.me/261384147899?text=Bonjour%20Madagascar%20Tourism%2C%20je%20souhaite%20avoir%20des%20informations%20sur%20Andasibe."
+class="whatsapp-btn"
+target="_blank">
+💬 WhatsApp
+</a>
+
+</section>
+
+<div class="back-button">
+<a href="index.html#destinations">← Retour aux destinations</a>
+</div>
+
+</main>
+
+<footer>
+
+<div class="footer-content">
+<h3>🇲🇬 Madagascar Tourism</h3>
+<p>Découvrez la beauté de Madagascar.</p>
+</div>
+
+<div class="footer-bottom">
+<p>© 2026 Madagascar Tourism. Tous droits réservés.</p>
+</div>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

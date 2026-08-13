@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Réservation touristique à Madagascar."
+  >
+
+  <title>Réservation | Madagascar Tourism</title>
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">
+    🇲🇬 Madagascar Tourism
+  </div>
+
+  <button
+    class="menu-btn"
+    aria-label="Ouvrir le menu"
+  >
+    ☰
+  </button>
+
+  <nav>
+
+    <a href="index.html">
+      Accueil
+    </a>
+
+    <a href="index.html#destinations">
+      Destinations
+    </a>
+
+    <a href="index.html#about">
+      À propos
+    </a>
+
+    <a href="index.html#contact">
+      Contact
+    </a>
+
+    <a href="reservation.html">
+      Réservation
+    </a>
+
+  </nav>
+
+</header>
+
+
+<main class="reservation-page">
+
+<section class="reservation-container">
+
+  <div class="section-title">
+
+    <h1>
+      📅 Réservation
+    </h1>
+
+    <p>
+      Préparez votre prochaine découverte
+      de Madagascar.
+    </p>
+
+  </div>
+
+
+  <!-- FORMULAIRE -->
+
+  <form id="reservationForm">
+
+
+    <div class="form-group">
+
+      <label for="name">
+        👤 Nom complet
+      </label>
+
+      <input
+        type="text"
+        id="name"
+        placeholder="Votre nom complet"
+        required
+      >
+
+    </div>
+
+
+    <div class="form-group">
+
+      <label for="phone">
+        📱 Téléphone
+      </label>
+
+      <input
+        type="tel"
+        id="phone"
+        placeholder="Votre numéro"
+        required
+      >
+
+    </div>
+
+
+    <div class="form-group">
+
+      <label for="email">
+        ✉️ Email
+      </label>
+
+      <input
+        type="email"
+        id="email"
+        placeholder="Votre email"
+      >
+
+    </div>
+
+
+    <div class="form-group">
+
+      <label for="destination">
+        🌍 Destination
+      </label>
+
+      <select
+        id="destination"
+        required
+      >
+
+        <option value="">
+          -- Choisir une destination --
+        </option>
+
+        <option value="Nosy Be">
+          🏝️ Nosy Be
+        </option>
+
+        <option value="Nosy Tanikely">
+          🌊 Nosy Tanikely
+        </option>
+
+        <option value="Isalo">
+          🏜️ Isalo
+        </option>
+
+        <option value="Andringitra">
+          ⛰️ Andringitra
+        </option>
+
+        <option value="Ranomafana">
+          🌿 Ranomafana
+        </option>
+
+        <option value="Andasibe">
+          🌳 Andasibe
+        </option>
+
+        <option value="Avenue des Baobabs">
+          🌴 Avenue des Baobabs
+        </option>
+
+        <option value="Tsingy">
+          🪨 Tsingy
+        </option>
+
+      </select>
+
+    </div>
+
+
+    <div class="form-group">
+
+      <label for="date">
+        📅 Date souhaitée
+      </label>
+
+      <input
+        type="date"
+        id="date"
+        required
+      >
+
+    </div>
+
+
+    <div class="form-group">
+
+      <label for="people">
+        👥 Nombre de personnes
+      </label>
+
+      <input
+        type="number"
+        id="people"
+        min="1"
+        max="50"
+        value="1"
+        required
+      >
+
+    </div>
+
+
+    <div class="form-group">
+
+      <label for="message">
+        💬 Message
+      </label>
+
+      <textarea
+        id="message"
+        rows="5"
+        placeholder="Informations supplémentaires..."
+      ></textarea>
+
+    </div>
+
+
+    <button
+      type="submit"
+      class="destination-reserve"
+    >
+      💾 Enregistrer la réservation
+    </button>
+
+  </form>
+
+
+  <!-- MESSAGE -->
+
+  <div
+    id="successMessage"
+    style="display:none;"
+  >
+
+    <h2>
+      ✅ Réservation enregistrée
+    </h2>
+
+    <p>
+      Votre réservation a été enregistrée
+      sur cet appareil.
+    </p>
+
+    <a
+      id="whatsappLink"
+      class="whatsapp-btn"
+      target="_blank"
+    >
+      💬 Envoyer sur WhatsApp
+    </a>
+
+  </div>
+
+
+</section>
+
+
+
+<!-- LISTE -->
+
+<section class="reservation-container">
+
+  <div class="section-title">
+
+    <h2>
+      📋 Réservations enregistrées
+    </h2>
+
+  </div>
+
+
+  <div id="reservationList">
+
+  </div>
+
+
+</section>
+
+</main>
+
+
+<footer>
+
+  <div class="footer-content">
+
+    <h3>
+      🇲🇬 Madagascar Tourism
+    </h3>
+
+    <p>
+      Découvrez la beauté de Madagascar.
+    </p>
+
+  </div>
+
+
+  <div class="footer-bottom">
+
+    <p>
+      © 2026 Madagascar Tourism.
+      Tous droits réservés.
+    </p>
+
+  </div>
+
+</footer>
+
+
+
+<script>
+
+document.addEventListener(
+  "DOMContentLoaded",
+  function () {
+
+
+    const form =
+      document.getElementById(
+        "reservationForm"
+      );
+
+
+    const destination =
+      document.getElementById(
+        "destination"
+      );
+
+
+    const reservationList =
+      document.getElementById(
+        "reservationList"
+      );
+
+
+    const successMessage =
+      document.getElementById(
+        "successMessage"
+      );
+
+
+    const whatsappLink =
+      document.getElementById(
+        "whatsappLink"
+      );
+
+
+    /* =========================
+       DESTINATION AUTOMATIQUE
+    ========================= */
+
+    const params =
+      new URLSearchParams(
+        window.location.search
+      );
+
+
+    const destinationParam =
+      params.get("destination");
+
+
+    if (destinationParam) {
+
+      for (
+        let i = 0;
+        i < destination.options.length;
+        i++
+      ) {
+
+        if (
+          destination.options[i]
+            .value
+            .toLowerCase() ===
+          destinationParam
+            .toLowerCase()
+        ) {
+
+          destination.value =
+            destination.options[i].value;
+
+          break;
+
+        }
+
+      }
+
+    }
+
+
+
+    /* =========================
+       AFFICHER RESERVATIONS
+    ========================= */
+
+    function afficherReservations() {
+
+      const reservations =
+        JSON.parse(
+          localStorage.getItem(
+            "reservations"
+          ) || "[]"
+        );
+
+
+      reservationList.innerHTML = "";
+
+
+      if (
+        reservations.length === 0
+      ) {
+
+        reservationList.innerHTML =
+          "<p>Aucune réservation enregistrée.</p>";
+
+        return;
+
+      }
+
+
+      reservations.forEach(
+        function (reservation, index) {
+
+
+          const card =
+            document.createElement(
+              "div"
+            );
+
+
+          card.className =
+            "destination-card";
+
+
+          card.style.padding =
+            "20px";
+
+
+          card.style.marginBottom =
+            "15px";
+
+
+          card.innerHTML = `
+
+            <h3>
+              🌍 ${reservation.destination}
+            </h3>
+
+            <p>
+              👤 <strong>Nom :</strong>
+              ${reservation.nom}
+            </p>
+
+            <p>
+              📱 <strong>Téléphone :</strong>
+              ${reservation.telephone}
+            </p>
+
+            <p>
+              📅 <strong>Date :</strong>
+              ${reservation.date}
+            </p>
+
+            <p>
+              👥 <strong>Personnes :</strong>
+              ${reservation.personnes}
+            </p>
+
+            ${
+              reservation.email
+              ? `<p>
+                  ✉️ <strong>Email :</strong>
+                  ${reservation.email}
+                </p>`
+              : ""
+            }
+
+            ${
+              reservation.message
+              ? `<p>
+                  💬 <strong>Message :</strong>
+                  ${reservation.message}
+                </p>`
+              : ""
+            }
+
+            <button
+              onclick="supprimerReservation(${index})"
+              style="
+                margin-top:10px;
+                padding:10px;
+                border:0;
+                border-radius:8px;
+                cursor:pointer;
+              "
+            >
+              🗑️ Supprimer
+            </button>
+
+          `;
+
+
+          reservationList.appendChild(
+            card
+          );
+
+        }
+      );
+
+    }
+
+
+
+    /* =========================
+       ENREGISTRER
+    ========================= */
+
+    form.addEventListener(
+      "submit",
+      function (event) {
+
+        event.preventDefault();
+
+
+        const nom =
+          document.getElementById(
+            "name"
+          ).value.trim();
+
+
+        const telephone =
+          document.getElementById(
+            "phone"
+          ).value.trim();
+
+
+        const email =
+          document.getElementById(
+            "email"
+          ).value.trim();
+
+
+        const selectedDestination =
+          destination.value;
+
+
+        const date =
+          document.getElementById(
+            "date"
+          ).value;
+
+
+        const personnes =
+          document.getElementById(
+            "people"
+          ).value;
+
+
+        const message =
+          document.getElementById(
+            "message"
+          ).value.trim();
+
+
+
+        const nouvelleReservation = {
+
+          nom: nom,
+
+          telephone: telephone,
+
+          email: email,
+
+          destination:
+            selectedDestination,
+
+          date: date,
+
+          personnes: personnes,
+
+          message: message,
+
+          dateCreation:
+            new Date().toISOString()
+
+        };
+
+
+        const reservations =
+          JSON.parse(
+            localStorage.getItem(
+              "reservations"
+            ) || "[]"
+          );
+
+
+        reservations.push(
+          nouvelleReservation
+        );
+
+
+        localStorage.setItem(
+          "reservations",
+          JSON.stringify(
+            reservations
+          )
+        );
+
+
+
+        /* =====================
+           WHATSAPP
+        ===================== */
+
+        const whatsappNumber =
+          "261384147899";
+
+
+        let text =
+          "Bonjour Madagascar Tourism !%0A%0A";
+
+        text +=
+          "📅 DEMANDE DE RÉSERVATION%0A%0A";
+
+        text +=
+          "👤 Nom : " +
+          encodeURIComponent(nom) +
+          "%0A";
+
+        text +=
+          "📱 Téléphone : " +
+          encodeURIComponent(telephone) +
+          "%0A";
+
+        text +=
+          "🌍 Destination : " +
+          encodeURIComponent(
+            selectedDestination
+          ) +
+          "%0A";
+
+        text +=
+          "📅 Date : " +
+          encodeURIComponent(date) +
+          "%0A";
+
+        text +=
+          "👥 Personnes : " +
+          encodeURIComponent(personnes) +
+          "%0A";
+
+
+        if (email) {
+
+          text +=
+            "✉️ Email : " +
+            encodeURIComponent(email) +
+            "%0A";
+
+        }
+
+
+        if (message) {
+
+          text +=
+            "💬 Message : " +
+            encodeURIComponent(message) +
+            "%0A";
+
+        }
+
+
+        text +=
+          "%0AMerci.";
+
+
+        whatsappLink.href =
+          "https://wa.me/" +
+          whatsappNumber +
+          "?text=" +
+          text;
+
+
+        successMessage.style.display =
+          "block";
+
+
+        form.reset();
+
+
+        afficherReservations();
+
+
+        successMessage.scrollIntoView({
+          behavior: "smooth"
+        });
+
+      }
+    );
+
+
+    afficherReservations();
+
+  }
+);
+
+
+
+/* =========================
+   SUPPRIMER
+========================= */
+
+function supprimerReservation(index) {
+
+  const reservations =
+    JSON.parse(
+      localStorage.getItem(
+        "reservations"
+      ) || "[]"
+    );
+
+
+  reservations.splice(
+    index,
+    1
+  );
+
+
+  localStorage.setItem(
+    "reservations",
+    JSON.stringify(
+      reservations
+    )
+  );
+
+
+  location.reload();
+
+}
+
+</script>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
