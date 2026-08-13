@@ -1,0 +1,1305 @@
+/* =========================================
+   MADAGASCAR TOURISM
+   STYLE.CSS
+========================================= */
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7f8fa;
+  color: #222;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 15px 6%;
+
+  background: #ffffff;
+
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+  font-size: 21px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+nav a {
+  color: #222;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #25a85a;
+}
+
+.menu-btn {
+  display: none;
+
+  border: none;
+  background: transparent;
+
+  font-size: 28px;
+  cursor: pointer;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+  min-height: 78vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 80px 20px;
+
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.48),
+      rgba(0, 0, 0, 0.48)
+    ),
+    url("images/Nosy_Be.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  color: #fff;
+}
+
+.hero-content {
+  max-width: 850px;
+}
+
+.hero-badge {
+  display: inline-block;
+
+  margin-bottom: 20px;
+  padding: 8px 17px;
+
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.18);
+
+  font-weight: bold;
+
+  backdrop-filter: blur(5px);
+}
+
+.hero h1 {
+  font-size: clamp(42px, 7vw, 74px);
+
+  line-height: 1.05;
+
+  margin-bottom: 25px;
+}
+
+.hero p {
+  max-width: 720px;
+
+  margin: 0 auto 32px;
+
+  font-size: 19px;
+  line-height: 1.7;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 15px;
+
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  display: inline-block;
+
+  padding: 15px 25px;
+
+  border-radius: 30px;
+
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  transform: translateY(-3px);
+}
+
+.hero-btn.primary {
+  background: #25D366;
+  color: #fff;
+}
+
+.hero-btn.secondary {
+  background: #fff;
+  color: #222;
+}
+
+
+/* =========================================
+   SECTION TITLE
+========================================= */
+
+.section-title {
+  max-width: 750px;
+
+  margin: 0 auto 45px;
+
+  text-align: center;
+}
+
+.section-title span {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  font-weight: bold;
+
+  color: #25a85a;
+}
+
+.section-title h2 {
+  font-size: 38px;
+
+  margin-bottom: 12px;
+}
+
+.section-title p {
+  color: #666;
+}
+
+
+/* =========================================
+   DESTINATIONS
+========================================= */
+
+.destinations {
+  padding: 80px 6%;
+  background: #fff;
+}
+
+.destination-grid {
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 25px;
+}
+
+.destination-card {
+  overflow: hidden;
+
+  background: #fff;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 6px 25px rgba(0, 0, 0, 0.08);
+
+  transition: 0.3s;
+}
+
+.destination-card:hover {
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.14);
+}
+
+.destination-card img {
+  width: 100%;
+  height: 220px;
+
+  object-fit: cover;
+}
+
+.destination-card-content {
+  padding: 20px;
+}
+
+.destination-card h3 {
+  font-size: 21px;
+
+  margin-bottom: 10px;
+}
+
+.destination-card p {
+  color: #666;
+
+  margin-bottom: 17px;
+}
+
+.destination-link {
+  display: inline-block;
+
+  color: #159447;
+
+  font-weight: bold;
+}
+
+.destination-link:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about {
+  padding: 80px 6%;
+
+  background: #f7f8fa;
+}
+
+.about-grid {
+  max-width: 1100px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+.about-card {
+  padding: 30px;
+
+  text-align: center;
+
+  background: #fff;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+.about-icon {
+  font-size: 42px;
+
+  margin-bottom: 15px;
+}
+
+.about-card h3 {
+  margin-bottom: 10px;
+}
+
+.about-card p {
+  color: #666;
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.cta {
+  padding: 90px 20px;
+
+  text-align: center;
+
+  color: #fff;
+
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)
+    ),
+    url("images/baobabss.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.cta-content {
+  max-width: 750px;
+  margin: auto;
+}
+
+.cta h2 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.cta p {
+  margin-bottom: 28px;
+  font-size: 18px;
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact {
+  padding: 80px 6%;
+  background: #fff;
+}
+
+.contact-actions {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 15px;
+
+  flex-wrap: wrap;
+}
+
+.contact-btn {
+  display: inline-block;
+
+  padding: 14px 25px;
+
+  border-radius: 30px;
+
+  background: #222;
+
+  color: #fff;
+
+  font-weight: bold;
+}
+
+.contact-btn.whatsapp-btn {
+  background: #25D366;
+}
+
+.contact-btn:hover {
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   DESTINATION PAGES
+========================================= */
+
+.destination-page {
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding-bottom: 70px;
+}
+
+.destination-hero {
+  position: relative;
+
+  min-height: 500px;
+
+  overflow: hidden;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  margin-bottom: 60px;
+}
+
+.destination-hero img {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  inset: 0;
+}
+
+.destination-hero::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      transparent,
+      rgba(0, 0, 0, 0.75)
+    );
+}
+
+.destination-hero-text {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  padding: 50px;
+
+  color: #fff;
+}
+
+.destination-hero-text h1 {
+  font-size: 48px;
+
+  margin-bottom: 12px;
+}
+
+.destination-hero-text p {
+  max-width: 700px;
+
+  font-size: 18px;
+}
+
+
+/* =========================================
+   DESTINATION INFO
+========================================= */
+
+.destination-info,
+.activities,
+.gallery,
+.location,
+.destination-contact {
+  padding: 45px 6%;
+}
+
+.destination-info h2,
+.activities h2,
+.gallery h2,
+.location h2,
+.destination-contact h2 {
+  font-size: 30px;
+
+  margin-bottom: 18px;
+}
+
+.destination-info p {
+  max-width: 850px;
+
+  margin-bottom: 15px;
+
+  color: #555;
+}
+
+
+/* =========================================
+   ACTIVITIES
+========================================= */
+
+.activity-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+.activity-card {
+  padding: 25px;
+
+  background: #fff;
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+.activity-card h3 {
+  margin-bottom: 10px;
+}
+
+.activity-card p {
+  color: #666;
+}
+
+
+/* =========================================
+   GALLERY
+========================================= */
+
+.gallery-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+
+  height: 350px;
+
+  object-fit: cover;
+
+  border-radius: 15px;
+}
+
+
+/* =========================================
+   WHATSAPP
+========================================= */
+
+.destination-contact {
+  text-align: center;
+
+  margin-top: 30px;
+
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  background: #f1fff6;
+}
+
+.destination-contact p {
+  margin-bottom: 25px;
+
+  color: #666;
+}
+
+.whatsapp-btn {
+  display: inline-block;
+
+  padding: 15px 25px;
+
+  border-radius: 30px;
+
+  background: #25D366;
+
+  color: #fff;
+
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-3px);
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.back-button {
+  text-align: center;
+
+  padding: 30px;
+}
+
+.back-button a {
+  display: inline-block;
+
+  padding: 12px 20px;
+
+  border-radius: 25px;
+
+  background: #222;
+
+  color: #fff;
+
+  font-weight: bold;
+}
+
+
+/* =========================================
+   RESERVATION
+========================================= */
+
+.reservation-page {
+  max-width: 900px;
+
+  margin: auto;
+
+  padding: 60px 20px 80px;
+}
+
+.reservation-header {
+  text-align: center;
+
+  margin-bottom: 35px;
+}
+
+.reservation-header h1 {
+  font-size: 40px;
+
+  margin-bottom: 10px;
+}
+
+.reservation-header p {
+  color: #666;
+}
+
+.reservation-card {
+  max-width: 700px;
+
+  margin: auto;
+
+  padding: 35px;
+
+  background: #fff;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.10);
+}
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 14px 15px;
+
+  border: 1px solid #d5d5d5;
+
+  border-radius: 10px;
+
+  font-size: 16px;
+
+  font-family: inherit;
+
+  background: #fff;
+
+  outline: none;
+
+  transition: 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #25D366;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(37, 211, 102, 0.12);
+}
+
+.form-group textarea {
+  resize: vertical;
+
+  min-height: 120px;
+}
+
+.reservation-btn {
+  width: 100%;
+
+  padding: 16px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #25D366;
+
+  color: #fff;
+
+  font-size: 17px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.reservation-btn:hover {
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+  padding: 40px 20px;
+
+  text-align: center;
+
+  background: #161616;
+
+  color: #fff;
+}
+
+.footer-content h3 {
+  margin-bottom: 8px;
+}
+
+.footer-content p {
+  color: #ccc;
+}
+
+.footer-bottom {
+  margin-top: 25px;
+
+  padding-top: 20px;
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer-bottom p {
+  color: #aaa;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .destination-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .activity-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .about-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  header {
+    padding: 13px 18px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+
+    top: 100%;
+
+    left: 0;
+    right: 0;
+
+    display: none;
+
+    flex-direction: column;
+
+    gap: 0;
+
+    background: #fff;
+
+    box-shadow:
+      0 8px 20px rgba(0, 0, 0, 0.10);
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    width: 100%;
+
+    padding: 15px 20px;
+
+    border-bottom:
+      1px solid #eee;
+  }
+
+
+  /* HERO */
+
+  .hero {
+    min-height: 70vh;
+
+    padding: 55px 18px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-btn {
+    width: 100%;
+
+    text-align: center;
+
+    padding: 14px 20px;
+  }
+
+
+  /* SECTIONS */
+
+  .destinations,
+  .about,
+  .contact {
+    padding: 60px 18px;
+  }
+
+  .section-title h2 {
+    font-size: 30px;
+  }
+
+
+  /* DESTINATIONS */
+
+  .destination-grid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .destination-card img {
+    height: 230px;
+  }
+
+
+  /* ABOUT */
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* CTA */
+
+  .cta {
+    padding: 70px 20px;
+  }
+
+  .cta h2 {
+    font-size: 30px;
+  }
+
+
+  /* DESTINATION PAGE */
+
+  .destination-page {
+    width: 100%;
+  }
+
+  .destination-hero {
+    min-height: 420px;
+
+    margin-bottom: 20px;
+  }
+
+  .destination-hero-text {
+    padding: 30px 20px;
+  }
+
+  .destination-hero-text h1 {
+    font-size: 36px;
+  }
+
+  .destination-info,
+  .activities,
+  .gallery,
+  .location,
+  .destination-contact {
+    padding: 35px 18px;
+  }
+
+  .activity-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid img {
+    height: 260px;
+  }
+
+
+  /* RESERVATION */
+
+  .reservation-page {
+    padding: 40px 15px 60px;
+  }
+
+  .reservation-header h1 {
+    font-size: 32px;
+  }
+
+  .reservation-card {
+    padding: 22px 18px;
+
+    border-radius: 14px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 16px;
+
+    padding: 13px;
+  }
+
+  .reservation-btn {
+    font-size: 16px;
+
+    padding: 15px;
+  }
+
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 400px) {
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .hero h1 {
+    font-size: 35px;
+  }
+
+  .destination-hero-text h1 {
+    font-size: 30px;
+  }
+
+  .destination-card img {
+    height: 200px;
+  }
+
+}
+/* =========================================
+   INDEX.HTML - AJOUT
+========================================= */
+
+.home-hero {
+  min-height: 430px;
+  padding: 70px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,.45),
+      rgba(0,0,0,.55)
+    ),
+    url("images/baobabss.jpg") center/cover no-repeat;
+
+  color: white;
+}
+
+.hero-content {
+  max-width: 750px;
+}
+
+.hero-content h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 17px;
+  margin-bottom: 25px;
+}
+
+.hero-btn {
+  display: inline-block;
+
+  padding: 13px 20px;
+
+  background: #176b2c;
+  color: white;
+
+  border-radius: 9px;
+
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+/* DESTINATIONS */
+
+.destinations {
+  width: 92%;
+  max-width: 1150px;
+
+  margin: 35px auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.section-title h2 {
+  color: #176b2c;
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.section-title p {
+  color: #666;
+}
+
+
+/* GRID */
+
+.destination-grid {
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  gap: 20px;
+}
+
+
+/* CARTE */
+
+.destination-card {
+  overflow: hidden;
+
+  background: white;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 3px 12px rgba(0,0,0,.08);
+}
+
+.destination-card > img {
+  width: 100%;
+  height: 220px;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+.destination-card-content {
+  padding: 20px;
+}
+
+.destination-card-content h3 {
+  color: #176b2c;
+  margin-bottom: 8px;
+  font-size: 21px;
+}
+
+.destination-card-content p {
+  color: #555;
+  margin-bottom: 15px;
+}
+
+
+/* ABOUT */
+
+.about {
+  width: 92%;
+  max-width: 1100px;
+
+  margin: 35px auto;
+
+  padding: 30px 22px;
+
+  background: white;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 3px 12px rgba(0,0,0,.06);
+}
+
+.about-content h2 {
+  color: #176b2c;
+  margin-bottom: 15px;
+}
+
+.about-content p {
+  color: #555;
+  margin-bottom: 12px;
+}
+
+
+/* CONTACT */
+
+.contact {
+  width: 92%;
+  max-width: 1100px;
+
+  margin: 35px auto;
+
+  padding: 30px 22px;
+
+  background: white;
+
+  border-radius: 14px;
+
+  text-align: center;
+
+  box-shadow:
+    0 3px 12px rgba(0,0,0,.06);
+}
+
+.contact-content h2 {
+  color: #176b2c;
+  margin-bottom: 12px;
+}
+
+.contact-content p {
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.contact-content .whatsapp-btn {
+  margin-top: 15px;
+}
+
+
+/* TABLET */
+
+@media (min-width: 600px) {
+
+  .home-hero {
+    min-height: 500px;
+  }
+
+  .hero-content h1 {
+    font-size: 44px;
+  }
+
+  .destination-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* DESKTOP */
+
+@media (min-width: 900px) {
+
+  .home-hero {
+    min-height: 560px;
+  }
+
+  .hero-content h1 {
+    font-size: 52px;
+  }
+
+  .hero-content p {
+    font-size: 19px;
+  }
+
+  .destination-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .destination-card > img {
+    height: 200px;
+  }
+
+}

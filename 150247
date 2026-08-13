@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Madagascar Tourism - Découvrez les plus belles destinations, plages, parcs naturels et paysages de Madagascar."
+  >
+
+  <meta
+    name="keywords"
+    content="Madagascar, tourisme, Nosy Be, Isalo, Tsingy, Baobabs, Andasibe, Ranomafana, voyage Madagascar"
+  >
+
+  <meta
+    name="author"
+    content="Madagascar Tourism"
+  >
+
+  <meta
+    name="theme-color"
+    content="#176b2c"
+  >
+
+  <title>
+    Madagascar Tourism | Découvrez Madagascar
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+  <link
+  rel="icon"
+  href="favicon.svg"
+  type="image/svg+xml"
+>
+
+</head>
+
+<body>
+
+
+<!-- ======================================
+     HEADER
+====================================== -->
+
+<header>
+
+  <div class="logo">
+    🇲🇬 Madagascar Tourism
+  </div>
+
+
+  <button
+    class="menu-btn"
+    aria-label="Ouvrir le menu"
+  >
+    ☰
+  </button>
+
+
+  <nav>
+
+    <a href="index.html">
+      Accueil
+    </a>
+
+    <a href="#destinations">
+      Destinations
+    </a>
+
+    <a href="#about">
+      À propos
+    </a>
+
+    <a href="#contact">
+      Contact
+    </a>
+
+    <a href="reservation.html">
+      Réservation
+    </a>
+
+  </nav>
+
+</header>
+
+
+
+<!-- ======================================
+     HERO
+====================================== -->
+
+<section class="home-hero">
+
+  <div class="hero-content">
+
+    <h1>
+      🇲🇬 Découvrez Madagascar
+    </h1>
+
+    <p>
+      Explorez les paysages, les plages,
+      les parcs naturels et les trésors
+      de la Grande Île.
+    </p>
+
+    <a
+      href="#destinations"
+      class="hero-btn"
+    >
+      🌍 Découvrir nos destinations
+    </a>
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================
+     DESTINATIONS
+====================================== -->
+
+<section
+  id="destinations"
+  class="destinations"
+>
+
+  <div class="section-title">
+
+    <h2>
+      🌍 Nos destinations
+    </h2>
+
+    <p>
+      Découvrez quelques-unes des
+      destinations incontournables
+      de Madagascar.
+    </p>
+
+  </div>
+
+
+
+  <div class="destination-grid">
+
+
+    <!-- NOSY BE -->
+
+    <article class="destination-card">
+
+      <img
+        src="images/Nosy_Be.jpg"
+        alt="Nosy Be Madagascar"
+      >
+
+      <div class="destination-card-content">
+
+        <h3>
+          🏝️ Nosy Be
+        </h3>
+
+        <p>
+          Découvrez les plages magnifiques,
+          les eaux turquoise et les paysages
+          exceptionnels de Nosy Be.
+        </p>
+
+        <a
+          href="nosy-be.html"
+          class="destination-btn"
+        >
+          Découvrir
+        </a>
+
+        <a
+          href="reservation.html?destination=Nosy%20Be"
+          class="destination-reserve"
+        >
+          📅 Réserver
+        </a>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- NOSY TANIKELY -->
+
+    <article class="destination-card">
+
+      <img
+        src="images/Nosy_Tanikely.jpg"
+        alt="Nosy Tanikely Madagascar"
+      >
+
+      <div class="destination-card-content">
+
+        <h3>
+          🌊 Nosy Tanikely
+        </h3>
+
+        <p>
+          Une petite île magnifique connue
+          pour ses eaux claires et sa
+          richesse marine.
+        </p>
+
+        <a
+          href="nosy-tanikely.html"
+          class="destination-btn"
+        >
+          Découvrir
+        </a>
+
+        <a
+          href="reservation.html?destination=Nosy%20Tanikely"
+          class="destination-reserve"
+        >
+          📅 Réserver
+        </a>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- ISALO -->
+
+    <article class="destination-card">
+
+      <img
+        src="images/isaloo.jpg"
+        alt="Parc national de l'Isalo"
+      >
+
+      <div class="destination-card-content">
+
+        <h3>
+          🏜️ Isalo
+        </h3>
+
+        <p>
+          Découvrez les formations rocheuses,
+          les canyons et les paysages
+          spectaculaires de l'Isalo.
+        </p>
+
+        <a
+          href="isalo.html"
+          class="destination-btn"
+        >
+          Découvrir
+        </a>
+
+        <a
+          href="reservation.html?destination=Isalo"
+          class="destination-reserve"
+        >
+          📅 Réserver
+        </a>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- ANDRINGITRA -->
+
+    <article class="destination-card">
+
+      <img
+        src="images/Andringitraa.jpg"
+        alt="Andringitra Madagascar"
+      >
+
+      <div class="destination-card-content">
+
+        <h3>
+          ⛰️ Andringitra
+        </h3>
+
+        <p>
+          Explorez les montagnes et les
+          magnifiques paysages naturels
+          d'Andringitra.
+        </p>
+
+        <a
+          href="andringitra.html"
+          class="destination-btn"
+        >
+          Découvrir
+        </a>
+
+        <a
+          href="reservation.html?destination=Andringitra"
+          class="destination-reserve"
+        >
+          📅 Réserver
+        </a>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- RANOMAFANA -->
+
+    <article class="destination-card">
+
+      <img
+        src="images/Chute_d'eau_Ranomafana.jpg"
+        alt="Ranomafana Madagascar"
+      >
+
+      <div class="destination-card-content">
+
+        <h3>
+          🌿 Ranomafana
+        </h3>
+
+        <p>
+          Découvrez la forêt tropicale et
+          la biodiversité exceptionnelle
+          de Ranomafana.
+        </p>
+
+        <a
+          href="ranomafana.html"
+          class="destination-btn"
+        >
+          Découvrir
+        </a>
+
+        <a
+          href="reservation.html?destination=Ranomafana"
+          class="destination-reserve"
+        >
+          📅 Réserver
+        </a>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- ANDASIBE -->
+
+    <article class="destination-card">
+
+      <img
+        src="images/andasibee.jpg"
+        alt="Andasibe Madagascar"
+      >
+
+      <div class="destination-card-content">
+
+        <h3>
+          🌳 Andasibe
+        </h3>
+
+        <p>
+          Explorez la forêt tropicale,
+          la nature et la biodiversité
+          d'Andasibe.
+        </p>
+
+        <a
+          href="andasibe.html"
+          class="destination-btn"
+        >
+          Découvrir
+        </a>
+
+        <a
+          href="reservation.html?destination=Andasibe"
+          class="destination-reserve"
+        >
+          📅 Réserver
+        </a>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- BAOBABS -->
+
+    <article class="destination-card">
+
+      <img
+        src="images/baobabss.jpg"
+        alt="Avenue des Baobabs Madagascar"
+      >
+
+      <div class="destination-card-content">
+
+        <h3>
+          🌴 Avenue des Baobabs
+        </h3>
+
+        <p>
+          Admirez les célèbres baobabs
+          et les paysages exceptionnels
+          de l'ouest de Madagascar.
+        </p>
+
+        <a
+          href="baobabs.html"
+          class="destination-btn"
+        >
+          Découvrir
+        </a>
+
+        <a
+          href="reservation.html?destination=Avenue%20des%20Baobabs"
+          class="destination-reserve"
+        >
+          📅 Réserver
+        </a>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- TSINGY -->
+
+    <article class="destination-card">
+
+      <img
+        src="images/tsingyy.jpg"
+        alt="Tsingy Madagascar"
+      >
+
+      <div class="destination-card-content">
+
+        <h3>
+          🪨 Tsingy
+        </h3>
+
+        <p>
+          Découvrez les impressionnantes
+          formations rocheuses des Tsingy
+          de Madagascar.
+        </p>
+
+        <a
+          href="tsingy.html"
+          class="destination-btn"
+        >
+          Découvrir
+        </a>
+
+        <a
+          href="reservation.html?destination=Tsingy"
+          class="destination-reserve"
+        >
+          📅 Réserver
+        </a>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================
+     À PROPOS
+====================================== -->
+
+<section
+  id="about"
+  class="about"
+>
+
+  <div class="about-content">
+
+    <h2>
+      🇲🇬 À propos de Madagascar Tourism
+    </h2>
+
+    <p>
+      Madagascar Tourism vous aide à
+      découvrir les plus beaux endroits
+      de Madagascar.
+    </p>
+
+    <p>
+      Notre objectif est de présenter
+      les destinations, les paysages,
+      la nature et les expériences
+      touristiques de la Grande Île.
+    </p>
+
+    <a
+      href="reservation.html"
+      class="destination-reserve"
+    >
+      📅 Préparer une réservation
+    </a>
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================
+     CONTACT
+====================================== -->
+
+<section
+  id="contact"
+  class="contact"
+>
+
+  <div class="contact-content">
+
+    <h2>
+      📞 Contact
+    </h2>
+
+    <p>
+      Vous souhaitez obtenir des
+      informations sur une destination ?
+    </p>
+
+    <p>
+      Contactez-nous directement
+      sur WhatsApp.
+    </p>
+     <a
+  href="https://wa.me/261384147899?text=Bonjour%20Madagascar%20Tourism%2C%20je%20souhaite%20avoir%20des%20informations%20sur%20vos%20destinations."
+  class="whatsapp-btn"
+  target="_blank"
+>
+  💬 Contacter sur WhatsApp
+</a>
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================
+     FOOTER
+====================================== -->
+
+<footer>
+
+  <div class="footer-content">
+
+    <h3>
+      🇲🇬 Madagascar Tourism
+    </h3>
+
+    <p>
+      Découvrez la beauté de Madagascar.
+    </p>
+
+  </div>
+
+
+  <div class="footer-bottom">
+
+    <p>
+      © 2026 Madagascar Tourism.
+      Tous droits réservés.
+    </p>
+
+  </div>
+
+</footer>
+
+
+
+<!-- ======================================
+     SCRIPT
+====================================== -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
